@@ -8,22 +8,24 @@ public class Operand {
     /**
      * construct operand from string token.
      */
-    public Operand(String token) {
 
+    private int opValue;
+    public Operand(String token) {
+        this.opValue = Integer.parseInt(token);
     }
 
     /**
      * construct operand from integer
      */
     public Operand(int value) {
-
+        this.opValue = value;
     }
 
     /**
      * return value of operand
      */
-    public int getValue() {
-        return 0;
+    public int getOpValue() {
+        return this.opValue;
     }
 
     /**
@@ -31,6 +33,15 @@ public class Operand {
      * operand.
      */
     public static boolean check(String token) {
-        return false;
+        try{
+            Integer.parseInt(token);
+        }catch (Exception ex){
+            return false;
+        }
+        return true;
     }
 }
+
+
+
+

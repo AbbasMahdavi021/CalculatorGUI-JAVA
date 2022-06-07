@@ -17,8 +17,8 @@ public class SubtractOperatorTest {
         Operand operatorOne =  new Operand(6);
         Operand operatorTwo =  new Operand(11);
         SubtractOperator so =  new SubtractOperator();
-        Operand result = new Operand(so.execute(operatorOne,operatorTwo).getValue());
-        assertThat( result.getValue(), is(equalTo(-5)));
+        Operand result = new Operand(so.execute(operatorOne,operatorTwo).getOpValue());
+        assertThat( result.getOpValue(), is(equalTo(-5)));
     }
 
     @Test
@@ -26,8 +26,8 @@ public class SubtractOperatorTest {
         Operand operatorOne =  new Operand(11);
         Operand operatorTwo =  new Operand(6);
         SubtractOperator so =  new SubtractOperator();
-        Operand result = new Operand(so.execute(operatorOne,operatorTwo).getValue());
-        assertThat( result.getValue(), is(equalTo(5)));
+        Operand result = new Operand(so.execute(operatorOne,operatorTwo).getOpValue());
+        assertThat( result.getOpValue(), is(equalTo(5)));
     }
 
     @Test
@@ -35,8 +35,8 @@ public class SubtractOperatorTest {
         Operand operatorOne =  new Operand(-11);
         Operand operatorTwo =  new Operand(6);
         SubtractOperator so =  new SubtractOperator();
-        Operand result = new Operand(so.execute(operatorOne,operatorTwo).getValue());
-        assertThat( result.getValue(), is(equalTo(-17)));
+        Operand result = new Operand(so.execute(operatorOne,operatorTwo).getOpValue());
+        assertThat( result.getOpValue(), is(equalTo(-17)));
     }
 
     @Test
@@ -44,8 +44,8 @@ public class SubtractOperatorTest {
         Operand operandOne =  new Operand(11);
         Operand operatorTwo =  new Operand(-6);
         SubtractOperator so =  new SubtractOperator();
-        Operand result = new Operand(so.execute(operandOne,operatorTwo).getValue());
-        assertThat( result.getValue(), is(equalTo(17)));
+        Operand result = new Operand(so.execute(operandOne,operatorTwo).getOpValue());
+        assertThat( result.getOpValue(), is(equalTo(17)));
     }
 
     @Test

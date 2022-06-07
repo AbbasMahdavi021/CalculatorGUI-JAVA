@@ -3,7 +3,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 
 import static org.hamcrest.core.Is.isA;
@@ -20,7 +19,7 @@ public class OperandTest {
         /* note the use of is() here is purely done for readability.
         the is function does nothing in terms of functionality.
          */
-        assertThat(operand.getValue(), is(equalTo(6)));
+        assertThat(operand.getOpValue(), is(equalTo(6)));
     }
 
     @Test
@@ -30,7 +29,7 @@ public class OperandTest {
         we are saying is the return value from getValue() actually
         an Integer.
          */
-        assertThat(operand.getValue(), isA(Integer.class));
+        assertThat(operand.getOpValue(), isA(Integer.class));
     }
     
     @ParameterizedTest

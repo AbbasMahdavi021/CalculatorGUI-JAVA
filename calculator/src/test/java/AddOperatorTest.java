@@ -15,8 +15,8 @@ public class AddOperatorTest {
         Operand operandOne =  new Operand(6);
         Operand operandTwo =  new Operand(11);
         AddOperator addOperator =  new AddOperator();
-        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue(), equalTo(17));
+        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue(), equalTo(17));
     }
 
     @Test
@@ -24,9 +24,9 @@ public class AddOperatorTest {
         Operand operandOne =  new Operand(11);
         Operand operandTwo =  new Operand(6);
         AddOperator addOperator =  new AddOperator();
-        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getValue());
+        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getOpValue());
         //assertEquals(17, result.getValue());
-        assertThat(result.getValue(), is(equalTo(17)));
+        assertThat(result.getOpValue(), is(equalTo(17)));
     }
 
     @Test
@@ -34,8 +34,8 @@ public class AddOperatorTest {
         Operand operandOne =  new Operand(6);
         Operand operandTwo =  new Operand(-11);
         AddOperator addOperator =  new AddOperator();
-        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue(), is(equalTo(-5)));
+        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue(), is(equalTo(-5)));
     }
 
     @Test
@@ -43,8 +43,8 @@ public class AddOperatorTest {
         Operand operandOne =  new Operand(-11);
         Operand operandTwo =  new Operand(6);
         AddOperator addOperator =  new AddOperator();
-        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue(), is(equalTo(-5)));
+        Operand result = new Operand(addOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue(), is(equalTo(-5)));
     }
 
     @Test

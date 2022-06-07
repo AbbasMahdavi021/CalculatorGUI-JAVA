@@ -17,8 +17,8 @@ public class PowerOperatorTest {
         Operand operandOne =  new Operand(2);
         Operand operandTwo =  new Operand(3);
         PowerOperator powerOperator =  new PowerOperator();
-        Operand res = new Operand(powerOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(res.getValue(), is(equalTo(8)));
+        Operand res = new Operand(powerOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(res.getOpValue(), is(equalTo(8)));
     }
 
     @Test
@@ -26,8 +26,8 @@ public class PowerOperatorTest {
         Operand operandOne =  new Operand(-2);
         Operand operandTwo =  new Operand(8);
         PowerOperator powerOperator =  new PowerOperator();
-        Operand res = new Operand(powerOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(res.getValue(), is(equalTo(256)));
+        Operand res = new Operand(powerOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(res.getOpValue(), is(equalTo(256)));
     }
 
 

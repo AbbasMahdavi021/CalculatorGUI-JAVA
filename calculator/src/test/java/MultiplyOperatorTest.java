@@ -17,8 +17,8 @@ public class MultiplyOperatorTest {
         Operand operandOne =  new Operand(6);
         Operand operandTwo =  new Operand(11);
         MultiplyOperator multiplyOperator =  new MultiplyOperator();
-        Operand result = new Operand(multiplyOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue(), is(equalTo(66)));
+        Operand result = new Operand(multiplyOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue(), is(equalTo(66)));
     }
 
     @Test
@@ -26,8 +26,8 @@ public class MultiplyOperatorTest {
         Operand operandOne =  new Operand(11);
         Operand operandTwo =  new Operand(6);
         MultiplyOperator multiplyOperator =  new MultiplyOperator();
-        Operand result = new Operand(multiplyOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue(), is(equalTo(66)));
+        Operand result = new Operand(multiplyOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue(), is(equalTo(66)));
     }
 
     @Test
@@ -35,8 +35,8 @@ public class MultiplyOperatorTest {
         Operand operandOne =  new Operand(-25);
         Operand operandTwo =  new Operand(5);
         MultiplyOperator multiplyOperator =  new MultiplyOperator();
-        Operand result = new Operand(multiplyOperator.execute(operandTwo,operandOne).getValue());
-        assertThat(result.getValue(), is(equalTo(-125)));
+        Operand result = new Operand(multiplyOperator.execute(operandTwo,operandOne).getOpValue());
+        assertThat(result.getOpValue(), is(equalTo(-125)));
     }
 
     @Test
@@ -44,8 +44,8 @@ public class MultiplyOperatorTest {
         Operand operandOne =  new Operand(25);
         Operand operandTwo =  new Operand(-5);
         MultiplyOperator multiplyOperator =  new MultiplyOperator();
-        Operand result = new Operand(multiplyOperator.execute(operandTwo,operandOne).getValue());
-        assertThat(result.getValue(), is(equalTo(-125)));
+        Operand result = new Operand(multiplyOperator.execute(operandTwo,operandOne).getOpValue());
+        assertThat(result.getOpValue(), is(equalTo(-125)));
     }
 
     @Test

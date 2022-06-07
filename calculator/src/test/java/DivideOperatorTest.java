@@ -17,8 +17,8 @@ public class DivideOperatorTest {
         Operand operandOne =  new Operand(6);
         Operand operandTwo =  new Operand(11);
         DivideOperator divideOperator =  new DivideOperator();
-        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue() , is(equalTo(0)));
+        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue() , is(equalTo(0)));
     }
 
     @Test
@@ -26,8 +26,8 @@ public class DivideOperatorTest {
         Operand operandOne =  new Operand(11);
         Operand operandTwo =  new Operand(6);
         DivideOperator divideOperator =  new DivideOperator();
-        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getValue());
-        assertThat( result.getValue(), is(equalTo(1)));
+        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat( result.getOpValue(), is(equalTo(1)));
     }
 
     @Test
@@ -35,8 +35,8 @@ public class DivideOperatorTest {
         Operand operandOne =  new Operand(25);
         Operand operandTwo =  new Operand(5);
         DivideOperator divideOperator =  new DivideOperator();
-        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getValue());
-        assertThat(result.getValue() ,  is(equalTo(5)));
+        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat(result.getOpValue() ,  is(equalTo(5)));
     }
 
     @Test
@@ -44,8 +44,8 @@ public class DivideOperatorTest {
         Operand operandOne =  new Operand(25);
         Operand operandTwo =  new Operand(-5);
         DivideOperator divideOperator =  new DivideOperator();
-        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getValue());
-        assertThat( result.getValue() ,  is(equalTo(-5)));
+        Operand result = new Operand(divideOperator.execute(operandOne,operandTwo).getOpValue());
+        assertThat( result.getOpValue() ,  is(equalTo(-5)));
     }
 
     @Test
