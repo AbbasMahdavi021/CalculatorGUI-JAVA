@@ -9,7 +9,7 @@ public class AddOperator extends Operator {
     }
 
     public Operand execute(Operand operandOne, Operand operandTwo){
-        int resultAdd = operandOne.getOpValue() + operandTwo.getOpValue();
+        int resultAdd = operandOne.getValue() + operandTwo.getValue();
         return new Operand(resultAdd);
     }
 }

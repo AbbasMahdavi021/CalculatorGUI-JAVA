@@ -9,23 +9,23 @@ public class Operand {
      * construct operand from string token.
      */
 
-    private int opValue;
+    private int opNum;
     public Operand(String token) {
-        this.opValue = Integer.parseInt(token);
+        this.opNum = Integer.parseInt(token);
     }
 
     /**
      * construct operand from integer
      */
     public Operand(int value) {
-        this.opValue = value;
+        this.opNum = value;
     }
 
     /**
      * return value of operand
      */
-    public int getOpValue() {
-        return this.opValue;
+    public int getValue() {
+        return this.opNum;
     }
 
     /**

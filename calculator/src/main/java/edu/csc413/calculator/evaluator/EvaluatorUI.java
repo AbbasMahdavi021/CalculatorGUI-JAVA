@@ -1,5 +1,8 @@
 package edu.csc413.calculator.evaluator;
 
+import edu.csc413.calculator.exceptions.InvalidTokenException;
+import edu.csc413.calculator.operators.Operator;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -71,7 +74,26 @@ public class EvaluatorUI extends JFrame implements ActionListener {
      *                    button is pressed.
      */
     public void actionPerformed(ActionEvent actionEventObject) {
+        String buttonPressed = actionEventObject.getActionCommand();
+        String textEntry = expressionTextField.getText();
 
+        expressionTextField.setText(textEntry + buttonPressed);
 
+        if ("=".equals(buttonPressed)){
+            try {
+                int result = (new Evaluator()).evaluateExpression(textEntry);
+                expressionTextField.setText(Integer.toString(result));
+            } catch (Exception ex) {
+                expressionTextField.setText("");
+            }
+        } else if ("C".equals(buttonPressed)){
+            expressionTextField.setText("");
+        }else if ("CE".equals(buttonPressed)){
+            int lastChar = textEntry.length() -1;
+            if(!textEntry.isEmpty()){
+                textEntry = textEntry.substring(0, lastChar);
+            }
+            this.expressionTextField.setText(textEntry);
+        }
     }
 }

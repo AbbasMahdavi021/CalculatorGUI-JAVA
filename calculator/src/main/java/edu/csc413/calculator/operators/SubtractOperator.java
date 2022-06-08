@@ -9,8 +9,7 @@ public class SubtractOperator extends Operator {
     }
 
     public Operand execute(Operand operandOne, Operand operandTwo){
-        int resultSub = operandOne.getOpValue() - operandTwo.getOpValue();
+        int resultSub = operandOne.getValue() - operandTwo.getValue();
         return new Operand(resultSub);
-
     }
 }

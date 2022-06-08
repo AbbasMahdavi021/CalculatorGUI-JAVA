@@ -49,16 +49,29 @@ public class Evaluator {
           // and values will be instances of the Operators.  See Operator class
           // skeleton for an example.
           Operator newOperator = Operator.getOperator(expressionToken);
-        
-          while (operatorStack.peek().priority() >= newOperator.priority() ) {
+
+          int closeParOp = 0;
+
+          while (operatorStack.peek().priority() >= newOperator.priority()
+          || closeParOp == 0 && ")".equals(expressionToken)) {
+
+            if(")".equals(expressionToken)) {
+              while(operatorStack.peek().priority() != 0){
+                Operator operatorFromStack = operatorStack.pop();
+                Operand operandTwo = operandStack.pop();
+                Operand operandOne = operandStack.pop();
+                Operand result = operatorFromStack.execute( operandOne, operandTwo );
+              }
+
+              operatorStack.pop();
+              closeParOp = 1;
+              break;
+            }
             // note that when we eval the expression 1 - 2 we will
             // push the 1 then the 2 and then do the subtraction operation
             // This means that the first number to be popped is the
             // second operand, not the first operand - see the following code
-            Operator operatorFromStack = operatorStack.pop();
-            Operand operandTwo = operandStack.pop();
-            Operand operandOne = operandStack.pop();
-            Operand result = operatorFromStack.execute( operandOne, operandTwo );
+
             operandStack.push( result );
           }
 
