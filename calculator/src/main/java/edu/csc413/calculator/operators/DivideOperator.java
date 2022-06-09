@@ -9,7 +9,7 @@ public class DivideOperator extends Operator {
     }
 
     public Operand execute(Operand operandOne, Operand operandTwo){
-        int resultDiv = operandOne.getValue() / operandTwo.getValue();
+        int resultDiv = operandOne.getOpValue() / operandTwo.getOpValue();
         return new Operand(resultDiv);
 
     }

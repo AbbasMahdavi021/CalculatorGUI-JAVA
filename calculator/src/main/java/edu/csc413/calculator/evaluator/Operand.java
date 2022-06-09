@@ -24,7 +24,7 @@ public class Operand {
     /**
      * return value of operand
      */
-    public int getValue() {
+    public int getOpValue() {
         return this.opNum;
     }
 

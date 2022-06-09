@@ -9,7 +9,7 @@ public class MultiplyOperator extends Operator {
     }
 
     public Operand execute(Operand operandOne, Operand operandTwo){
-        int resultMul = operandOne.getValue() * operandTwo.getValue();
+        int resultMul = operandOne.getOpValue() * operandTwo.getOpValue();
         return new Operand(resultMul);
 
     }

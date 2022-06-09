@@ -9,7 +9,7 @@ public class PowerOperator extends Operator {
     }
 
     public Operand execute(Operand operandOne, Operand operandTwo){
-        int resultPow = (int) Math.pow(operandOne.getValue(), operandTwo.getValue());
+        int resultPow = (int) Math.pow(operandOne.getOpValue(), operandTwo.getOpValue());
         return new Operand(resultPow);
     }
 }

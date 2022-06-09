@@ -57,7 +57,6 @@ public abstract class Operator {
         return operators.get(token);
     }
 
-    
      /**
      * determines if a given token is a valid operator.
      * please do your best to avoid static checks
