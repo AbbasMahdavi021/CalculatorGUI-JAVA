@@ -1,8 +1,5 @@
 package edu.csc413.calculator.evaluator;
 
-import edu.csc413.calculator.exceptions.InvalidTokenException;
-import edu.csc413.calculator.operators.Operator;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

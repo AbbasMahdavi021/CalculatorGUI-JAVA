@@ -49,22 +49,14 @@ public class Evaluator {
                     } else {
                         if ((newOperator.priority() == -1)) {
                             while (operatorStack.peek().priority() != 0) {
-                                Operator operatorFromStack = operatorStack.pop();
-                                Operand operandTwo = operandStack.pop();
-                                Operand operandOne = operandStack.pop();
-                                Operand result = operatorFromStack.execute(operandOne, operandTwo);
-                                operandStack.push(result);
+                                processExp ();
                             }
                             if (operatorStack.peek().priority() == 0) {
                                 operatorStack.pop();
                             }
                         } else {
                             while ((operatorStack.peek().priority() >= newOperator.priority())) {
-                                Operator operatorFromStack = operatorStack.pop();
-                                Operand operandTwo = operandStack.pop();
-                                Operand operandOne = operandStack.pop();
-                                Operand result = operatorFromStack.execute(operandOne, operandTwo);
-                                operandStack.push(result);
+                                processExp ();
 
                                 if (operatorStack.isEmpty()) {
                                     break;
@@ -77,15 +69,21 @@ public class Evaluator {
             }
         }
         while (!operatorStack.isEmpty()) {
-            Operator operatorFromStack = operatorStack.pop();
-            Operand operandTwo = operandStack.pop();
-            Operand operandOne = operandStack.pop();
-            Operand result = operatorFromStack.execute(operandOne, operandTwo);
-            operandStack.push(result);
+            processExp ();
         }
-        return operandStack.peek().getOpValue();
+        return operandStack.pop().getOpValue();
+    }
+
+    private void processExp () {
+        Operator operatorFromStack = operatorStack.pop();
+        Operand operandTwo = operandStack.pop();
+        Operand operandOne = operandStack.pop();
+        Operand result = operatorFromStack.execute(operandOne, operandTwo);
+        operandStack.push(result);
     }
 }
+
+
     // Control gets here when we've picked up all of the tokens; you must add
     // code to complete the evaluation - consider how the code given here
     // will evaluate the expression 1+2*3
