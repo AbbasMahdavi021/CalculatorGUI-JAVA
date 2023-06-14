@@ -1,28 +1,17 @@
-# CSC 413 - Project One
+# CalculatorGUI: Mathematical Expression Evaluator
 
-## Student Name  : Abbas Mahdavi
+This assignment focuses on implementing an object-oriented design to create two programs: an evaluator for mathematical expressions and a graphical user interface (GUI) for the evaluator.
 
-## Student ID    : 918345420
+The provided Evaluator class (Evaluator.java) is almost complete, and the task is to program the utility classes it relies on: Operand and Operator. Follow the code suggestions to finalize the Evaluator class implementation. The Evaluator class offers a public method, eval, which takes a String parameter representing an infix mathematical expression. It parses and evaluates the expression, returning the integer result.
 
-## Student Email : amahdavi2@sfsu.edu  / (abbas.mahdavi021@gmail.com)
+Expressions consist of integer operands and operators such as +, -, *, /, ^, (, and ). Operators have predefined priorities, and the evaluator follows the rules of precedence when evaluating expressions.
 
-### Note failure to completely fill out this README.md could cause you to recieve a  0 for your project until correctly done
+Example expression: 2 + 3 * 4 evaluates to 14.
 
-# Adding the JUnit 5 Jars to your project.
+Requirements:
 
-### InteliJ
-In order to use the Unit tests given you will need to let intelij know where to find the needed jars. (jars are just java version of an archived folder or zip file.). 
-
-Intelij will actually find these jars for you while imporiting the project.
-
-If for some reason it does not, you can add the jars in the following way:
-
-1. Complete the process for "create project from existing resources"
-2. Then go to File -> Project Structure.
-3. Inside project Structure select the "Libraries" tab on the left.
-4. You will see a "+" symbol near the top of the window. CLick this symbol.
-5. A little window will popup asking what kind of library you want to import. Select "jar"
-6. After selection jar, a file selector will appear, navigate to the folder calcualtor/src/test/resources
-7. Add ALL jars in this folder. Then hit OK/Accept until all windows for project structure are closed.
-8. Now all jar needed to run unit test should be attached to your project.
-9. To run unit tests you can simply select any of the files in test/java. Also you may right-slick on the java folder inside test and select run all tests to run all given unit tests.
+Implement Operand and Operator classes.
+Complete the Evaluator class based on code suggestions.
+Use the eval method to evaluate infix mathematical expressions.
+Develop a GUI for the evaluator.
+Note: Detailed instructions and priority rules are provided in the code.
